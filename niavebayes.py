@@ -33,7 +33,7 @@ sports_label = le.fit_transform(sports)
 features = list(zip(weather_encoded, temp_encoded))
 print(features)
 
-#Create a Gaussian Classifier
+# Create a Gaussian Classifier
 netflix_model = GaussianNB()
 yard_model = GaussianNB()
 sports_model = GaussianNB()
@@ -47,7 +47,7 @@ sports_model.fit(features,sports_label)
 # Temp Hot: 1, Mild: 2, Cold: 0
 predict_data = [2, 2]
 
-#Predict Output
+# Predict Output
 netflix_predicted = netflix_model.predict([predict_data])
 yard_predicted = yard_model.predict([predict_data])
 sports_predicted = sports_model.predict([predict_data])
